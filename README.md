@@ -28,3 +28,7 @@ Provide types for:
 - Signatures specs in jit are expected to be given with numba types, not strings.
 
 ## Installation
+
+```bash
+uv add git+https://github.com/py-stubs/numba-stubs.git
+```

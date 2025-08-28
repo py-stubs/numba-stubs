@@ -1,9 +1,4 @@
-from typing import Any, Literal, Self
-
-ErrorModel = Literal["python", "numpy"]
-InLine = Literal["never", "always"]
-Target = Literal["cpu", "parallel", "gpu"]
-Identity = Literal[0, 1, "reorderable"]
+from typing import Any, Self
 
 class Type[T]:
     def __call__(self, *args: Any, **kwds: Any) -> Self: ...
@@ -21,3 +16,19 @@ class Boolean(Type[bool]):
 
 class Float(Type[float]):
     def __getitem__(self, args: Any) -> Array[float]: ...
+
+float32: Float
+float64: Float
+byte: Integer
+uint8: Integer
+uint16: Integer
+uint32: Integer
+uint64: Integer
+
+intp: Integer
+int8: Integer
+int16: Integer
+int32: Integer
+int64: Integer
+void: NoneType
+bool_: Boolean

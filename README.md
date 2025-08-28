@@ -23,7 +23,7 @@ Provide types for:
 
 - numba types are generics in those stubs. This is not the case in the actual implementation, don't try to subtype them.
 
-- Due to the numerous awkards design choices, overloads are mandatory for jit. This mean that the docstring from the actual implementation is lost (at least with Pylance).
+- Due to actual implementation design choices, overloads are mandatory for jit. This mean that the docstring from the actual implementation is lost (at least with Pylance).
 
 - Signatures specs in jit are expected to be given with numba types, not strings.
 
@@ -31,4 +31,12 @@ Provide types for:
 
 ```bash
 uv add git+https://github.com/py-stubs/numba-stubs.git
+```
+
+## Testing
+
+At the root of the repository, run:
+
+```bash
+uv run tests/main.py
 ```
